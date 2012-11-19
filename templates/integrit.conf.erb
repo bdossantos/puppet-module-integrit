@@ -1,0 +1,31 @@
+# This file is managed by Puppet
+#
+# /etc/integrit.conf : configuration file for integrit
+#
+# See integrit(1) and /usr/share/doc/integrit/examples/
+# for more information.
+#
+root=<%= @root %>
+known=<%= @known %>
+current=<%= @current %>
+#
+# # Here's a table of letters and the corresponding checks / options:
+# # Uppercase turns the check off, lowercase turns it on.
+# #
+# #       s checksum
+# #       i inode
+# #       p permissions
+# #       l number of links
+# #       u uid
+# #       g gid
+# #       z file size (redundant if checksums are on)
+# #       a access time
+# #       m modification time
+# #       c ctime (time UN*X file info last changed)
+# #       r reset access time (use with care)
+#
+# # ignore directories that are expected to change
+#
+<% @ignore.each do |i| -%>
+!<%= i %>
+<% end %>
