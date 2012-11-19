@@ -1,6 +1,7 @@
 # Puppet integrit module
 
-Module for configuring [integrit](http://packages.debian.org/en/squeeze/integrit).
+Module for configuring [integrit](http://packages.debian.org/en/squeeze/integrit),
+a file integrity verification program.
 
 Tested on Debian GNU/Linux 6.0 Squeeze with Puppet 2.6. Patches for other
 operating systems welcome.
