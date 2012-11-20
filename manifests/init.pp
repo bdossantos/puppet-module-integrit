@@ -1,3 +1,40 @@
+# == Class: integrit
+#
+# Full description of class integrit here.
+#
+# === Parameters
+#
+# $config   Configuration path
+#
+# $root     System root
+#
+# $known    Database containing a snapshot of the system in a known state
+#
+# $current  Database containing a snapshot of current system state.
+#           This database is compared with the known state snapshot when
+#           integrity check is performed
+#
+# $log      Integrit log path
+#
+# $ignore   Following directories would be ignored during system integrity
+#           check
+#
+# === Examples
+#
+# class { 'integrit':
+#   config  => '/etc/integrit/integrit.conf',
+#   known   => '/var/lib/integrit/known.cdb',
+#   current => '/var/lib/integrit/current.cdb',
+#   ignore  => [
+#     '/dev', '/sys', '/home', '/proc', '/tmp', '/var',
+#     '/root', '/usr/local','/usr/src', '/lost+found'
+#   ],
+# }
+#
+# === Authors
+#
+# Benjamin Dos Santos <benjamin.dossantos@gmail.com>
+#
 class integrit(
   $config = '/etc/integrit/integrit.conf',
   $root = '/',
